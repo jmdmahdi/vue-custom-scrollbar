@@ -1,12 +1,22 @@
 <template>
-  <section class="ps-container" :is="$props.tagname" @ps-scroll-y="scrollHandle" @ps-scroll-x="scrollHandle" @ps-scroll-up="scrollHandle" @ps-scroll-down="scrollHandle" @ps-scroll-left="scrollHandle" @ps-scroll-right="scrollHandle" @ps-y-reach-start="scrollHandle" @ps-y-reach-end="scrollHandle" @ps-x-reach-start="scrollHandle" @ps-x-reach-end="scrollHandle">
+  <section class="ps-container" :is="$props.tagname" @ps-scroll-y="scrollHandle" @ps-scroll-x="scrollHandle"
+           @ps-scroll-up="scrollHandle" @ps-scroll-down="scrollHandle" @ps-scroll-left="scrollHandle"
+           @ps-scroll-right="scrollHandle" @ps-y-reach-start="scrollHandle" @ps-y-reach-end="scrollHandle"
+           @ps-x-reach-start="scrollHandle" @ps-x-reach-end="scrollHandle">
     <slot></slot>
   </section>
 </template>
 <style lang="css">
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
 .ps-container {
   position: relative;
+}
+
+.ps__rail-y {
+  width: 15px;
+  right: 0px;
+  left: auto;
 }
 </style>
 <script>
