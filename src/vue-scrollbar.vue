@@ -56,6 +56,7 @@ export default {
         if (!this._ps_inited) {
           this._ps_inited = true
           this.ps = new PerfectScrollbar(this.$el, this.settings)
+          this.ps.isRtl = false
         } else {
           this.ps.update()
         }
